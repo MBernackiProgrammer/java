@@ -1,3 +1,5 @@
+package com.company;
+
 import java.util.Scanner;
 
 public class Main {
@@ -13,14 +15,20 @@ public class Main {
 
         System.out.println("Write your name");
         String name = scanner.nextLine();
-
-        if(areYouAWoman(name))
+        if(name.isEmpty())
         {
-            System.out.println("You are a woman");
+            if(areYouAWoman(name))
+            {
+                System.out.println("You are a woman");
+            }
+            else
+            {
+                System.out.println("You are a man");
+            }
         }
         else
         {
-            System.out.println("You are a man");
+            System.out.println("Please write name");
         }
     }
 }
